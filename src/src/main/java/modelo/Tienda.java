@@ -49,7 +49,7 @@ public class Tienda {
 
 	public void buscarPorModelo(String nombreModelo) {
 		for (int i = 0; i < productos.size(); i++) {
-			if(productos.get(i).getMarca()==nombreModelo){
+			if(productos.get(i).getModelo()==nombreModelo){
 				System.out.println(getProductos().get(i).toString());
 			}
 		}
@@ -57,7 +57,7 @@ public class Tienda {
 
 	public void buscarPorTipo(String tipo) {
 		for (int i = 0; i < productos.size(); i++) {
-			if(productos.get(i).getMarca()==tipo){
+			if(productos.get(i).getTipo()==tipo){
 				System.out.println(getProductos().get(i).toString());
 			}
 		}

@@ -93,8 +93,12 @@ public abstract class DispositivoElectronico {
 
 	@Override
 	public String toString() {
-		return getTipo()+" "+getMarca()+"" +
-				"modelo: "+modelo+"" +
-				"memeria RAM: "+getMemoriaRAM();
+		return getTipo()+" marca: "+getMarca()+"" +
+				" modelo: "+modelo+"" +
+				" memeria RAM: "+getMemoriaRAM()+"GB " +
+				"almacenamiento:"+getAlmacenamiento()+" " +
+				"año fabricacion: "+getAñoFabricacion()+" " +
+				"procesador: "+getProcesador()+" " +
+				"precio: $"+getPrecio();
 	}
 }

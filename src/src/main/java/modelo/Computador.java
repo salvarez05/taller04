@@ -51,6 +51,6 @@ public class Computador extends DispositivoElectronico {
 
 	@Override
 	public String toString() {
-		return super.toString();
+		return super.toString()+" chasis: "+getChasis()+" fuente de poder: "+getFuentePoder()+" tarjeta de video: "+getTarjetaVideo();
 	}
 }

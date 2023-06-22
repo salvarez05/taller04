@@ -27,12 +27,17 @@ public class Tablet extends DispositivoElectronico {
 		this.resolucionPantalla=resolucionPantalla;
 	}
 
+	public void agregarAccesorio(String nombre){
+		Accesorio accesorio= new Accesorio(nombre);
+		accesorios.add(accesorio);
+	}
+
 	public String getTipo() {
 		return "Tablet";
 	}
 
 	@Override
 	public String toString() {
-		return super.toString();
+		return super.toString()+" resolucion de pantalla: "+getResolucionPantalla()+" accesorios:" ;
 	}
 }

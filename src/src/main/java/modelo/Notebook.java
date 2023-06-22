@@ -40,4 +40,9 @@ public class Notebook extends DispositivoElectronico {
 	public String getTipo() {
 		return "Notebook";
 	}
+
+	@Override
+	public String toString() {
+		return super.toString()+" resolucion de pantalla: "+getResolucionPantalla()+" bateria: "+getBateria()+"mAh teclado de tipo: "+getTipoTeclado();
+	}
 }
