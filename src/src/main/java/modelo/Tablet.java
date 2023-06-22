@@ -30,4 +30,9 @@ public class Tablet extends DispositivoElectronico {
 	public String getTipo() {
 		return "Tablet";
 	}
+
+	@Override
+	public String toString() {
+		return super.toString();
+	}
 }

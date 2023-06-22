@@ -76,12 +76,25 @@ public abstract class DispositivoElectronico {
 	}
 
 	public DispositivoElectronico(String marca, int memoriaRAM, int almacenamiento, String procesador, String modelo, int añoFabricacion, int precio, int stock) {
-		throw new UnsupportedOperationException();
+		this.marca=marca;
+		this.memoriaRAM=memoriaRAM;
+		this.modelo=modelo;
+		this.almacenamiento=almacenamiento;
+		this.añoFabricacion=añoFabricacion;
+		this.procesador=procesador;
+		this.precio=precio;
 	}
 
 	public abstract String getTipo();
 
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
+	}
+
+	@Override
+	public String toString() {
+		return getTipo()+" "+getMarca()+"" +
+				"modelo: "+modelo+"" +
+				"memeria RAM: "+getMemoriaRAM();
 	}
 }

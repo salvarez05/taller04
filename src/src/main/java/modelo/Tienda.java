@@ -1,8 +1,6 @@
 package modelo;
 
 import java.util.ArrayList;
-import modelo.DispositivoElectronico;
-import modelo.Cliente;
 
 public class Tienda {
 	private String direccion;
@@ -41,17 +39,28 @@ public class Tienda {
 		this.productos = productos;
 	}
 
-	public void buscarMarca(String nombreMarca) {
-
-		throw new UnsupportedOperationException();
+	public void buscarPorMarca(String nombreMarca) {
+		for (int i = 0; i < productos.size(); i++) {
+			if(productos.get(i).getMarca()==nombreMarca){
+				System.out.println(getProductos().get(i).toString());
+			}
+		}
 	}
 
-	public void buscarModelo(String nombreModelo) {
-		throw new UnsupportedOperationException();
+	public void buscarPorModelo(String nombreModelo) {
+		for (int i = 0; i < productos.size(); i++) {
+			if(productos.get(i).getMarca()==nombreModelo){
+				System.out.println(getProductos().get(i).toString());
+			}
+		}
 	}
 
-	public void buscarTipo(String tipo) {
-		throw new UnsupportedOperationException();
+	public void buscarPorTipo(String tipo) {
+		for (int i = 0; i < productos.size(); i++) {
+			if(productos.get(i).getMarca()==tipo){
+				System.out.println(getProductos().get(i).toString());
+			}
+		}
 	}
 
 
@@ -77,7 +86,18 @@ public class Tienda {
 		}return false;
 	}
 
-	public void agregarDispositivo() {
-		System.out.println("");
+	public void agregarComputador(String marca, int memoriaRAM, int almacenamiento, String procesador, String modelo, int añoFabricacion, int precio, int stock, String tarjetaVideo, String fuentePoder, String chasis, String marcaPantalla, String modeloPantalla, int añoPantalla) {
+		Computador computador=new Computador(marca, memoriaRAM, almacenamiento, procesador, modelo, añoFabricacion, precio, stock, tarjetaVideo, fuentePoder, chasis);
+		Pantalla pantalla =new Pantalla(marcaPantalla,modeloPantalla,añoPantalla);
+		computador.setPantalla(pantalla);
+		productos.add(computador);
+	}
+	public void agregarNotebook(String marca, int memoriaRAM, int almacenamiento, String procesador, String modelo, int añoFabricacion, int precio, int stock, String resolucionPantalla, String tipoTeclado, int bateria) {
+		Notebook notebook=new Notebook(marca, memoriaRAM, almacenamiento, procesador, modelo, añoFabricacion, precio, stock, resolucionPantalla,tipoTeclado,bateria);
+		productos.add(notebook);
+	}
+	public void agregarTablet(String marca, int memoriaRAM, int almacenamiento, String procesador, String modelo, int añoFabricacion, int precio, int stock, String resolucionPantalla){
+		Tablet tablet=new Tablet(marca, memoriaRAM, almacenamiento, procesador, modelo, añoFabricacion, precio, stock, resolucionPantalla);
+		productos.add(tablet);
 	}
 }
