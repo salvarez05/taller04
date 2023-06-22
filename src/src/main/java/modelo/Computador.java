@@ -31,10 +31,13 @@ public class Computador extends DispositivoElectronico {
 	}
 
 	public Computador(String marca, int memoriaRAM, int almacenamiento, String procesador, String modelo, int añoFabricacion, int precio, int stock, String tarjetaVideo, String fuentePoder, String chasis) {
-		throw new UnsupportedOperationException();
+		super(marca, memoriaRAM, almacenamiento, procesador, modelo, añoFabricacion, precio, stock);
+		this.chasis=chasis;
+		this.fuentePoder=fuentePoder;
+		this.tarjetaVideo=tarjetaVideo;
 	}
 
 	public String getTipo() {
-		throw new UnsupportedOperationException();
+		return "Computador";
 	}
 }

@@ -30,10 +30,14 @@ public class Notebook extends DispositivoElectronico {
 	}
 
 	public Notebook(String marca, int memoriaRAM, int almacenamiento, String procesador, String modelo, int añoFabricacion, int precio, int stock, String resolucionPantalla, String tipoTeclado, int bateria) {
-		throw new UnsupportedOperationException();
+		super(marca, memoriaRAM, almacenamiento, procesador, modelo, añoFabricacion, precio, stock);
+		this.resolucionPantalla=resolucionPantalla;
+		this.bateria=bateria;
+		this.tipoTeclado=tipoTeclado;
+
 	}
 
 	public String getTipo() {
-		throw new UnsupportedOperationException();
+		return "Notebook";
 	}
 }

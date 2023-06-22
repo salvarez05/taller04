@@ -6,7 +6,7 @@ public class Cliente {
 	private String correo;
 	private int numeroContacto;
 	private EstadoCivil estadoCivil;
-	public enum estadoCivil;
+	public enum EstadoCivil{viudo, casado,soltero}
 	private String ciudad;
 
 	public String getNombre() {
@@ -58,6 +58,11 @@ public class Cliente {
 	}
 
 	public Cliente(String nombre, String apellido, String correo, int numeroContacto, EstadoCivil estadoCivil, String ciudad) {
-		throw new UnsupportedOperationException();
+		this.nombre=nombre;
+		this.apellido=apellido;
+		this.correo=correo;
+		this.numeroContacto=numeroContacto;
+		this.estadoCivil=estadoCivil;
+		this.ciudad=ciudad;
 	}
 }

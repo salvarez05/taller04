@@ -1,11 +1,18 @@
 package modelo;
 
 import java.util.ArrayList;
-import modelo.Accesorios;
 
 public class Tablet extends DispositivoElectronico {
 	private String resolucionPantalla;
-	private ArrayList<Accesorios> accesorios = new ArrayList<Accesorios>();
+	private ArrayList<Accesorio> accesorios = new ArrayList<Accesorio>();
+
+	public ArrayList<Accesorio> getAccesorios() {
+		return accesorios;
+	}
+
+	public void setAccesorios(ArrayList<Accesorio> accesorios) {
+		this.accesorios = accesorios;
+	}
 
 	public String getResolucionPantalla() {
 		return this.resolucionPantalla;
@@ -16,10 +23,11 @@ public class Tablet extends DispositivoElectronico {
 	}
 
 	public Tablet(String marca, int memoriaRAM, int almacenamiento, String procesador, String modelo, int añoFabricacion, int precio, int stock, String resolucionPantalla) {
-		throw new UnsupportedOperationException();
+		super(marca, memoriaRAM, almacenamiento, procesador, modelo, añoFabricacion, precio, stock);
+		this.resolucionPantalla=resolucionPantalla;
 	}
 
 	public String getTipo() {
-		throw new UnsupportedOperationException();
+		return "Tablet";
 	}
 }

@@ -30,6 +30,8 @@ public class Pantalla {
 	}
 
 	public Pantalla(String marca, String modelo, int año) {
-		throw new UnsupportedOperationException();
+		this.marca=marca;
+		this.año=año;
+		this.modelo=modelo;
 	}
 }

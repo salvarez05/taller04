@@ -8,7 +8,7 @@ public class Tienda {
 	private String direccion;
 	private String nombre;
 	private ArrayList<DispositivoElectronico> productos = new ArrayList<DispositivoElectronico>();
-	private ArrayList<Cliente> cliente = new ArrayList<Cliente>();
+	private ArrayList<Cliente> clientes = new ArrayList<Cliente>();
 
 	public String getDireccion() {
 		return this.direccion;
@@ -25,12 +25,28 @@ public class Tienda {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	public ArrayList<Cliente> getClientes() {
+		return clientes;
+	}
+
+	public ArrayList<DispositivoElectronico> getProductos() {
+		return productos;
+	}
+
+	public void setClientes(ArrayList<Cliente> clientes) {
+		this.clientes = clientes;
+	}
+
+	public void setProductos(ArrayList<DispositivoElectronico> productos) {
+		this.productos = productos;
+	}
 
 	public void buscarMarca(String nombreMarca) {
+
 		throw new UnsupportedOperationException();
 	}
 
-	public void buscarModelo(Sttring nombreModelo) {
+	public void buscarModelo(String nombreModelo) {
 		throw new UnsupportedOperationException();
 	}
 
@@ -38,15 +54,30 @@ public class Tienda {
 		throw new UnsupportedOperationException();
 	}
 
+
+
 	public Tienda(String direccion, String nombre) {
-		throw new UnsupportedOperationException();
+		this.direccion=direccion;
+		this.nombre=nombre;
 	}
 
-	public void agregarCliente() {
-		throw new UnsupportedOperationException();
+	public void agregarCliente(String nombre, String apellido, String correo, int numeroContacto, Cliente.EstadoCivil estadoCivil, String ciudad) {
+		if (correoAsociado(correo)==false){
+			Cliente cliente= new Cliente(nombre, apellido, correo, numeroContacto, estadoCivil, ciudad);
+			clientes.add(cliente);
+		}else{
+			System.out.println("El correo ya esta asociado a otra cuenta");
+		}
+	}
+	public boolean correoAsociado(String correo){
+		for (int i = 0; i < clientes.size(); i++) {
+			if (clientes.get(i).getCorreo()==correo){
+				return true;
+			}
+		}return false;
 	}
 
 	public void agregarDispositivo() {
-		throw new UnsupportedOperationException();
+		System.out.println("");
 	}
 }
